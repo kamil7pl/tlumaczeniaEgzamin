@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>English</title>
+</head>
+<body>
+	<h1>Skrypt sprawdzający znajomość słówek z angielskiego przed wejściem na internet.</h1>
+	<h2>Do działania potrzebny folder z biblioteką smarty.</h2>
+	<!--<h2>Proszę uruchomić ten plik (jako pierwsze).</h2>-->
+	<p>Witam serdecznie. Jest to skrypt oparty na php oraz Smarty.</p>
+	<form action="ocena.php" method="post" />
+	{foreach item=slowko from=$dzisiejszeSlowka}
+		{$slowko.angielski}: <input value="" name="{$slowko.angielski}" autocomplete="off" /><br /><br />
+	{/foreach}
+	<input value="Wyślij" type="submit" />
+	</form>
+</body>
+</html>
